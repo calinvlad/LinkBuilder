@@ -1,0 +1,16 @@
+{
+  "development": {
+    "username": "vlad",
+    "password": "1q2w3e",
+    "database": "LINKS",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
