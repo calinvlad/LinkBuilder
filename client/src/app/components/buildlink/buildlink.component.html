@@ -1,0 +1,38 @@
+<article class="center mw5 mw6-ns hidden ba mv4">
+  <h1 class="f4 bg-near-black white mv0 pv2 ph3">Link Builder | Cover your matterport</h1>
+  <div class="pa3 bt">
+    <p class="f6 f5-ns lh-copy measure mv0">
+      Names are unique. Please choose them wisely.
+    </p>
+    <p class="f6 f5-ns lh-copy measure mv0">
+      For support, contact me at <a href="mailto:theodor@aforc.ro">theodor@aforc.ro</a>
+    </p>
+  </div>
+</article>
+<div class="box-center">
+  <form [formGroup]="buildForm" class="width__form">
+    <fieldset class="ba b--transparent ph0 mh0 width__fieldset">
+      <div class="mt3 width__group">
+        <label class="db fw4 lh-copy measure width__label">Name</label>
+        <input class="pa2 input-reset ba bg-transparent w-100 measure width__input"
+        formControlName="name">
+      </div>
+      <div class="mt3 width__group">
+        <label class="db lh-copy measure width__label">Link</label>
+        <input class="pa2 input-reset ba bg-transparent measure width__input"
+        formControlName="link">
+      </div>
+    </fieldset>
+    <div class="mt3 width__group">
+      <input class="b pa2 input-reset ba b--black bg-transparent pointer measure width__input text-center"
+             (click)="build()" value="Build">
+    </div>
+  </form>
+</div>
+
+<div class="box-center" *ngIf="link">
+  <div class="pa2 f8 measure box-small">
+    <p class="f6 link ba ph3 pv2 mb2 black">Link: {{link}}</p>
+    <a class="f6 link dim br1 ba ph3 pv2 mb2 dib black right" (click)="copy(link)">Copy Link</a>
+  </div>
+</div>
