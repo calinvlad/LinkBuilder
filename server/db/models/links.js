@@ -1,12 +1,12 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
     const Link = sequelize.define('Link', {
-        id: {
-            type: DataTypes.INTEGER.UNSIGNED,
-            allowNull: false,
-            autoIncrement: true,
-            field: 'id'
-        },
+        // id: {
+        //     type: DataTypes.INTEGER.UNSIGNED,
+        //     allowNull: false,
+        //     autoIncrement: true,
+        //     field: 'id'
+        // },
         name: {
             type: DataTypes.STRING,
             primaryKey: true,
