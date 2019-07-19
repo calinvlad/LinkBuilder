@@ -10,7 +10,8 @@ import {CONF} from "../../conf";
   styleUrls: ['./readlink.component.sass']
 })
 export class ReadlinkComponent implements OnInit {
-  link:  any;
+  _link: any
+  link:  any
   conf = CONF
 
   constructor(
@@ -25,7 +26,8 @@ export class ReadlinkComponent implements OnInit {
     const name = this.route.params['_value'].name
     this._buildService.getByName(name).subscribe((result) => {
       if(result.data) {
-        this.link = this.sanitizer.bypassSecurityTrustResourceUrl(result.data.link);
+        this._link = result
+        this.link = this.sanitizer.bypassSecurityTrustResourceUrl(this._link.data.link);
 
       } else {
         this.router.navigate([''])
