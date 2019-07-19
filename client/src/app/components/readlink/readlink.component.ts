@@ -25,7 +25,7 @@ export class ReadlinkComponent implements OnInit {
     console.log(this.route)
     const name = this.route.params['_value'].name
     this._buildService.getByName(name).subscribe((result) => {
-      if(result.data) {
+      if(this._link.data) {
         this._link = result
         this.link = this.sanitizer.bypassSecurityTrustResourceUrl(this._link.data.link);
 

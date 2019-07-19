@@ -14,7 +14,7 @@ export class BuildlinkComponent implements OnInit {
     private _buildService: BuildlinkService
   ) { }
   conf = CONF
-  _link: Array<any>
+  _link: any
   link: any
 
   buildForm = new FormGroup( {
@@ -29,7 +29,7 @@ export class BuildlinkComponent implements OnInit {
   build() {
     if(this.buildForm.value) {
       this._buildService.build(this.buildForm.value).subscribe((result) => {
-        this._link = result.data.name
+        this._link = result
         this.link = this.conf.url + this._link.data.name
       })
     }
