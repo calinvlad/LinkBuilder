@@ -5,7 +5,7 @@ import {HttpClient} from "@angular/common/http";
   providedIn: 'root'
 })
 export class BuildlinkService {
-  server = 'http://localhost:8000'
+  server = 'http://207.154.246.34:8000'
 
   constructor(
     private http: HttpClient
