@@ -14,9 +14,11 @@ app.use(morgan('combined'))
 
 require('./src/routes')(app)
 
+const httpServer = http.createServer(app)
+
 sequelize.sync({force: false})
     .then(() => {
-	httpServer.listen(PORT, () => {
-        	console.log('HTTP Server running on port ' + port);
+	httpServer.listen(port, () => {
+        	console.log('HTTP Server running on port ' + port)
 	});
     })

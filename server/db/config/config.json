@@ -7,7 +7,7 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
+    "username": "vlad",
     "password": "1q2w3e",
     "database": "LINKS",
     "host": "127.0.0.1",
