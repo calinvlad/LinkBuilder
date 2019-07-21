@@ -5,7 +5,7 @@ import {HttpClient} from "@angular/common/http";
   providedIn: 'root'
 })
 export class BuildlinkService {
-  server = 'http://207.154.246.34:8000'
+  server = 'https://apivr.raumgang.com'
 
   constructor(
     private http: HttpClient

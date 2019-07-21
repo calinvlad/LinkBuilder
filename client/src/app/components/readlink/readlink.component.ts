@@ -22,13 +22,11 @@ export class ReadlinkComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    console.log(this.route)
     const name = this.route.params['_value'].name
     this._buildService.getByName(name).subscribe((result) => {
+      this._link = result
       if(this._link.data) {
-        this._link = result
         this.link = this.sanitizer.bypassSecurityTrustResourceUrl(this._link.data.link);
-
       } else {
         this.router.navigate([''])
       }
